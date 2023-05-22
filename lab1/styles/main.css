@@ -1,0 +1,244 @@
+/*Im bad at css but i've tried my best,sorry*/
+
+main {
+    margin: 77px 0 0 240px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.categories {
+    padding-top: 15px;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.categories li{
+    display: inline-block;
+    color: black;
+    padding: 12px;
+    margin: 0 10px;
+    border-radius: 30px;
+    border: 2px solid var(--hover-color);
+    background-color: var(--categories-color);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.categories li:first-child {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.categories .active:hover {
+    background-color: var(--secondary-color);
+}
+
+.categories li:hover {
+    background-color: var(--under-title-color);
+}
+
+.videos {
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    margin: auto auto auto 0;
+}
+
+.preview{
+    background-position: right;
+    background-color: black;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.play-icon {
+    margin-top: 30px;
+    opacity: 0;
+    align-self: center;
+    justify-content: center;
+    font-size: 65px;
+    color: white;
+    z-index: 1;
+}
+
+.play-icon-video{
+    margin-top: 70px;
+    opacity: 0;
+    align-self: center;
+    justify-content: center;
+    font-size: 65px;
+    color: white;
+    z-index: 1;
+}
+
+.preview:hover > .play-icon-video {
+    opacity: 1;
+}
+
+.preview:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.preview:hover > .play-icon {
+    opacity: 1;
+}
+
+.stream1{
+    background-image: url('../images/kai-video.png');
+}
+.stream2{
+    background-image: url('../images/speed-video.png');
+}
+.stream3{
+    background-image: url('../images/xqc-video.png');
+}
+.stream4{
+    background-image: url('../images/adin-video.png');
+}
+.stream5{
+    background-image: url('../images/mr-beast-video.png');
+}
+.stream6{
+    background-image: url('../images/aj-video.png');
+}
+.stream7{
+    background-image: url('../images/niko-video.png');
+}
+
+.stream {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.live {
+    background-color: var(--live-color);
+    color: white;
+    border-radius: 20%;
+    width: 40px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-viewers{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 2px 4px;
+    background-color: #000000aa;
+    color: #ffffff;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.info-under-video {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-under-video i {
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.streamer-info p,
+.streamer-info h3 {
+    cursor: pointer;
+}
+
+.streamer-info div{
+    margin-top: 3px;
+}
+
+.avatar {
+    width: 45px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50px;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+.streamer-info {
+    display: flex;
+    margin-bottom: 10px;
+}
+.streamer-info h3 {
+    margin-top: 5px;
+    align-self: end;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #000000;
+    font-size: 14px;
+}
+
+.streamer-info p:hover,
+.streamer-info h3:hover {
+    color: var(--text-hover-color);
+}
+
+
+@media screen and (max-width: 1200px){
+    main{
+        margin: 77px 0 0 80px;
+    }
+}
+
+@media screen and (max-width: 742px) {
+    main {
+        margin: 147px 0 0 80px;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    main {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .videos {
+        grid-template-columns: 100%;
+    }
+    .stream {
+        height: 250px;
+    }
+    .play-icon {
+        margin-top: 50px;
+    }
+    .play-icon-video{
+        margin-top: 100px;
+    }
+}
+.main-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}

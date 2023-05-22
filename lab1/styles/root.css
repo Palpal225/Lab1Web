@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+:root {
+    --main-color: rgb(220, 220, 220);
+    --secondary-color: rgb(255, 191, 0);
+    --hover-color: rgb(220,219,220);
+    --live-color: rgb(255, 0, 0);
+    --under-title-color: rgb(192, 192, 192);
+    --text-hover-color: rgb(30, 144, 255);
+    --aside-color: rgb(232,232,232);
+    --aside-color-secondary: rgb(223,223,223);
+    --categories-color: rgb(235,235,235);
+    --main-font-family: "Playfair Display", serif;
+    --secondary-font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
